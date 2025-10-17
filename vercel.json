@@ -1,14 +1,17 @@
 {
   "functions": {
-  "builds": [
-    { "src": "package.json", "use": "@vercel/node" }
-  ]
-}
-,
+    "api/analytics.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+
+  "builds": [
+    { "src": "package.json", "use": "@vercel/node" }
   ]
 }
